@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://kit.fontawesome.com/121868e1da.js"></script>
+    <script src="includes/jquery-3.5.0.min.js"></script>
+    <script src="funciones.js"></script>
+    <title>Tarea 06 dwes</title>
+</head>
+
+<body>
+    <div class="elcontenedor">
+        <!--Muestra el header contiene el buscador, titulo y el button de añadir-->
+        <div class="cabecera">
+            <div class="btn_buscar_add" id="buscar">
+                <input type="text" id="input_buscador" class="form-control" value="" placeholder="Buscador por nombre">
+            </div>
+            <div class="btn_buscar_add">
+                <div id="titulo">Tienda Amazonia</div>
+            </div>
+            <div class="btn_buscar_add" id="insertar">
+                <button class="btn btn-primary">Insertar</button>
+            </div>
+        </div>
+
+        <!--div que muestra el listado de la base de datos con ajax-->
+        <div class="tabla" id="tabla"></div>
+
+        <!--formulario que actualiza los valores del stock-->
+        <form id="btn_editar_mostrar">
+            <div class="form_titulo">Update Stock</div>
+            <p id="mensajeError" class="alert alert-danger"></p>
+            <div class="form_codigo" id="form_codigo"></div>
+            <div class="form_stock" id="form_stock"></div>
+            <!--guardamos el valor del codigo -->
+            <input type="type" id="cod_oculto" value="">
+            <div id="muestra_el_stock"></div>
+            <input type="number" class="btn_input_stock" id="update_stock" value="">
+            <div class="btn_stock">
+                <div class="boton_stock"><button type="button" class="btn btn-success" id="btn_update">Update</button>
+                </div>
+                <div class="boton_stock"><button type="button" class="btn btn-danger"
+                        id="btn_close_stock">Close</button></div>
+            </div>
+        </form>
+
+        <!--formulario de añadir registros en la base de datos-->
+        <form id="btn_add_registro">
+            <!--muestra el error cuando se añade el registro-->
+            <div class="form_titulo">Añadir registros</div>
+            <p id="mensajeError_add"></p>
+            <div class="formulario_add">
+
+                <div class="add_input">
+                    <!--input del codigo-->
+                    <div>
+                        <label>Código<input type="text" class="input_add" id="add_codigo"></label>
+                    </div>
+                    <div>
+                        <p id="cod_mensaje_error"></p>
+                    </div>
+                </div>
+
+                <div class="add_input">
+                    <!--input del nombre-->
+                    <div>
+                        <label>Nombre<input type="text" class="input_add" id="add_nombre"></label>
+                    </div>
+                    <div>
+                        <p id="nombre_mensaje_error"></p>
+                    </div>
+                </div>
+
+                <div class="add_input">
+                    <!--input del PVP-->
+                    <div>
+                        <label>PVP<input type="number" step="any" class="input_add" id="add_PVP"></label>
+                    </div>
+                    <div>
+                        <p id="PVP_mensaje_error"></p>
+                    </div>
+                </div>
+
+                <div class="add_input mostrar_select">
+                    <!--select de familia-->
+                    <div>
+                        <label>Lista<select id="lista_reproduccion" name="lista_reproduccion"></select></label>
+                    </div>
+                    <div>
+                        <p id="familia_mensaje_error"></p>
+                    </div>
+                </div>
+
+                <div class="add_input">
+                    <!--input del stock-->
+                    <div>
+                        <label>Stock <input type="number" class="input_add" id="add_stock"></label>
+                    </div>
+                    <div>
+                        <p id="stock_mensaje_error"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--texterea de descripción-->
+            <div>
+                <textarea id="add_descripcion" cols="100" rows="5"></textarea>
+            </div>
+            <p id="descripcion_mensaje_error"></p>
+
+            <div class="btn_add">
+                <div class="boton_stock"><button type="button" class="btn btn-success"
+                        id="btn_guardar_add">Guardar</button>
+                </div>
+                <div class="boton_stock"><button type="button" class="btn btn-danger" id="btn_close_add">Cerrar</button>
+                </div>
+            </div>
+        </form>
+
+        <!--formulario para borrar los registros-->
+        <form id="btn_delete_mostrar">
+            <div class="form_titulo">Tienda Amazonia</div>
+            <!--muestra mensaje de error-->
+            <p id="mensajeErrorDelete"></p>
+            <!--muestra el borrado si fue ok-->
+            <div class="form_delete alert alert-success" id="form_delete"></div>
+            <!--botonos para borrar o cerrar del formulario de Delete-->
+            <div class="btn_delete">
+                <div class="boton_delete"><button type="button" class="btn btn-success"
+                        id="btn_borrar_delete">Delete</button></div>
+                <div class="boton_delete"><button type="button" class="btn btn-danger"
+                        id="btn_close_delete">Close</button></div>
+            </div>
+        </form>
+
+
+
+        <!--mensaje si todo es correcto y guardamos el registro ok-->
+        <div id="inserta_correctametne">
+            <!--mensaje Ejemplo "Registro guardado correctamente"-->
+            <div id="mensaje_insertado_ok"></div>
+            <div>
+                <!--boton para cerrar el mensaje-->
+                <div class="boton_cerrar_insertar"><button class="btn btn-danger"
+                        id="boton_cerrar_insertar">Cerrar</button></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

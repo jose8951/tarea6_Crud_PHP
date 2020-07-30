@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.elcontenedor {
+    background-color: beige;
+    height: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    background-color: #91dbad;
+    width: 98%;
+    margin: 0 auto;
+    border-bottom: 3px solid black;
+    margin-bottom: 5px;
+}
+
+.btn_buscar_add input[type=text] {
+    width: 300px;
+    height: 40px;
+    font-size: 1.3em;
+    margin: 20px;
+}
+
+.cabecera .btn_buscar_add button {
+    padding: 10px;
+    width: 200px;
+    margin: 16px;
+    /*  box-shadow: 5px 10px 18px #888888;*/
+    box-shadow: 17px 18px 34px -6px rgba(0, 0, 0, 0.75);
+}
+
+.btn_buscar_add #titulo {
+    font-size: 1.5em;
+    font-family: cursive;
+    margin-top: 15px;
+    letter-spacing: 1.4em;
+    font-weight: 900;
+}
+
+.tabla {
+    text-align: center;
+    color: red;
+    font-size: 1.5em;
+}
+
+.tabla button {
+    border-radius: 5px;
+}
+
+/*formato de la tabla*/
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039;
+}
+
+td {
+    padding: 8px;
+    background: #e8edff;
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid transparent;
+}
+
+tr:hover td {
+    background: #d0dafd;
+    color: #339;
+}
+
+
+/*formulario del stock*/
+
+#btn_editar_mostrar {
+    /*height: 250px;*/
+    width: 500px;
+    border: 5px solid darkgrey;
+    border-radius: 10px;
+    background: #E9E5E5;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: none;
+    box-sizing: border-box;
+}
+
+#btn_editar_mostrar #form_codigo {
+    color: black;
+    font-weight: bold;
+    padding-left: 20px;
+
+}
+
+form .form_titulo {
+    text-align: center;
+}
+
+form .form_codigo {
+    background-color: white;
+    margin: 10px;
+
+}
+
+form .form_stock {
+    margin: 10px;
+}
+
+form .btn_input_stock {
+    margin-left: 5px;
+    margin: 10px;
+    width: 80px;
+}
+
+form .btn_stock {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .boton_stock button {
+    width: 90px;
+    margin: 10px;
+    padding: 3px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+
+.btn_editar_mostrar .mensajeError {
+    text-align: center;
+    font-size: 1.2em;
+    background-color: red;
+}
+
+/*formulario de add */
+
+#btn_add_registro {
+    /*height: 250px;*/
+    width: 800px;
+    border: 5px solid darkgrey;
+    border-radius: 10px;
+    background: rgb(233, 229, 229);
+    padding: 20px;
+    position: fixed;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: none;
+    box-sizing: border-box;
+}
+
+.add_input {
+    display: flex;
+    padding: 7px;
+}
+
+.add_input label {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add_input select {
+    width: 200px;
+}
+
+#btn_add_registro textarea {
+    resize: none;
+    width: 100%;
+}
+
+#btn_add_registro .btn_add {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.codigo_ok {
+    color: green;
+    width: 200px;
+    margin-left: 30px;
+}
+
+.codigo_error {
+    color: red;
+    margin-left: 30px;
+}
+
+.formulario_add .mostrar_select {
+    width: 300px;
+}
+
+.formulario_add .mostrar_select select {
+    width: 150px;
+    margin-right: 50px;
+}
+
+#btn_add_registro #mensajeError_add {
+    height: 50px;
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+    display: none;
+}
+
+.mensaje_add_error {
+    color: white;
+    background-color: red;
+}
+
+.add_input #familia_mensaje_error {
+    width: 300px;
+}
+
+/**delete */ 
+#btn_delete_mostrar {
+    height: 250px;
+    width: 400px;
+    border: 5px solid darkgrey;
+    border-radius: 10px;
+    background: #E9E5E5;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: none;
+    box-sizing: border-box;
+}
+
+.elcontenedor #btn_delete_mostrar .btn_delete {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.boton_delete button {
+    width: 100px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+
+/*contenedor de ok  insertar*/
+
+#inserta_correctametne {
+    height: 250px;
+    width: 500px;
+    border: 5px solid darkgrey;
+    border-radius: 10px;
+    background: #E9E5E5;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: none;
+    box-sizing: border-box;
+}
+
+#inserta_correctametne .boton_cerrar_insertar {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#mensaje_insertado_ok {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 10px;
+}
+
+#inserta_correctametne .boton_cerrar_insertar button {
+    font-size: 1.1em;
+    width: 150px;
+    margin-top: 80px;
+    box-shadow: 5px 10px 18px #888888;
+}
